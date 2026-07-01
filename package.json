@@ -1,0 +1,19 @@
+{
+  "name": "startup-validator",
+  "version": "1.0.0",
+  "description": "Full-stack MERN application for Startup Validator",
+  "main": "server/server.js",
+  "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "scripts": {
+    "install-all": "npm install && npm install --prefix client && npm install --prefix server",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "start": "npm run start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
